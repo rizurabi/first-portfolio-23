@@ -1,32 +1,66 @@
-body {
-    padding-left: 11em;
-    font-family: Georgia, "Times New Roman",
-          Times, serif;
-    color: purple;
-    background-color: #d8da3d }
-  ul.navbar {
-    list-style-type: none;
-    padding: 0;
+/* Reset default margin and padding */
+* {
     margin: 0;
-    position: absolute;
-    top: 2em;
-    left: 1em;
-    width: 9em }
-  h1 {
-    font-family: Helvetica, Geneva, Arial,
-          SunSans-Regular, sans-serif }
-  ul.navbar li {
-    background: white;
-    margin: 0.5em 0;
-    padding: 0.3em;
-    border-right: 1em solid black }
-  ul.navbar a {
-    text-decoration: none }
-  a:link {
-    color: blue }
-  a:visited {
-    color: purple }
-  address {
-    margin-top: 1em;
-    padding-top: 1em;
-    border-top: thin dotted }
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+}
+
+.profile-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.hero-text {
+    font-size: 2rem;
+    color: #f39c12;
+}
+.section {
+    padding: 4rem 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Project styles */
+.project {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+}
