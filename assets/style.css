@@ -4,14 +4,15 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #000000;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 2.5;
+    background-color: #E8BCB9;
+    color: #ffffff;
 }
 
 header {
-    background-color: #317679;
+    background-color: #610027;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -20,7 +21,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: #1a3442;
+    background-color: #912b48;
     padding: 0.5rem;
 }
 
@@ -38,11 +39,12 @@ section {
 }
 
 #about {
-    background-color: #f9f9f9;
+    background-color: #E8BCB9;
+    text-align: center;
 }
 
 #projects {
-    background-color: #fff;
+    background-color: #E8BCB9;
 }
 
 .project {
@@ -52,11 +54,10 @@ section {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #1d2e52;
+    background-color: #912b48;
     color: #fff;
 }
 
-/* Responsive layout adjustments */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;

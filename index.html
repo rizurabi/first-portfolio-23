@@ -5,15 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Developer Portfolio</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        
+        .tab-button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #610027;
+            border: none;
+            transition: background-color 0.3s; 
+            border-radius: 10px;
+        }
+
+        
+        .tab-button:hover {
+            background-color: #AE445A; 
+        }
+        .rounded-image-container {
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      height: 300px; 
+    }
+        .rounded-image {
+      border-radius: 10px; 
+      overflow: hidden; 
+      width: 250px; 
+      height: 290px;
+        }
+       
+        .button-container {
+            display: flex;
+            gap: 200px; 
+            flex-wrap: wrap; 
+        }
+    
+   
+    .rounded-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .picture-button {
+            display: inline-block;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+        .picture-button:hover {
+            background-color: #912b48; 
+        }
+        .text-under-button {
+            
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+}
+#contact {
+  text-align: center;
+}
+
+    </style>
 </head>
 <body>
     <header>
         <h1>Margarita Zurabian</h1>
-        <img src="assets/temppic.jpg" alt="temporary pic" class="image-with-size">
+        <div class="rounded-image-container">
+        <div class="rounded-image">
+        <img src="assets/portpic.jpg" alt="temporary pic" class="image-with-size">
+    </div>
         <style>
             .image-with-size {
-                width: 260px;
-                height: 270px;
+                width: 250px;
+                height: 290px;
             }
     
             .aspect-ratio-image {
@@ -21,39 +87,71 @@
                 height: auto;
             }
         </style>
-        <p>Web Developer</p>
+        
     </header>
     
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" onclick="openTab('about')" class="tab-button">About Me</a></li>
+            <li><a href="#" onclick="openTab('projects')" class="tab-button">Projects</a></li>
+            <li><a href="#" onclick="openTab('contact')" class="tab-button">Contact</a></li>
         </ul>
     </nav>
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Margarita Zurabian and I am a new Developer.
-            I am currently 20 years old and going to school for my computer
-            science degree.
+        <p>Hello! I'm Margarita Zurabian and I am a new Developer <br>
+             currently studying and gaining new skills. <br>
+             I was born in Russia and am 20 years old, going <br>
+             to school to get my computer science degree. ⭐
         </p>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Projects coming soon</h3>
-        </div>
+<a href="assets/pr1.png" target="pr1" class="picture-button">
+<img src="assets/pr1.png" alt="Button Image" width="200" height="150">
+<div class="text-under-button">Project 1</div>
+                
+<a href="assets/pr1.png" target="pr1" class="picture-button">
+<img src="assets/pr1.png" alt="Button Image" width="200" height="150">
+<div class="text-under-button">Project 2</div>
+                   
+<a href="assets/pr1.png" target="pr1" class="picture-button">
+<img src="assets/pr1.png" alt="Button Image" width="200" height="150">
+<div class="text-under-button">Project 3</div>
+    </div>
     </section>
     
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>You can reach me at: rita.zurabyan@gmail.com</p>
+        <p><a href="https://www.instagram.com/odetorita/">Instagram</a></p>
+        <p><a href="https://github.com/rizurabi">Github</a></p>
+        <p> <a href="mailto:rita.zurabyan@gmail.com">rita.zurabyan@gmail.com</a></p>
     </section>
     
     <footer>
         <p>&copy; 2023 Margarita Zurabian. All rights reserved.</p>
     </footer>
+
+    <script>
+        function openTab(tabId) {
+           
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            
+            const selectedSection = document.getElementById(tabId);
+            selectedSection.style.display = 'block';
+        }
+
+        
+        window.onload = function() {
+            openTab('about');
+        };
+    </script>
 </body>
 </html>
